@@ -1,0 +1,227 @@
+.App {
+  text-align: center;
+  width: 350px;
+  height: 600px;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(128, 128, 128, 0.149);
+}
+
+.frontPageLogo {
+  width: 80%;
+}
+
+.frontPageButton {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.frontPageBottom {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+
+.frontPageBottom:hover {
+  cursor: pointer;
+  color: gray;
+}
+
+h2 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  color: rgb(46, 46, 46);
+}
+
+.h4 {
+  color: rgb(46, 46, 46);
+  padding-bottom: 50px;
+}
+
+a:visited {
+  color: #0059ff;
+}
+
+header {
+  width: 100%;
+  height: 80px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.headerLogo {
+  height: 50px;
+  margin-left: 20px;
+}
+
+.dropdown {
+  margin-right: 20px;
+}
+
+.content {
+  text-align: center;
+  width: 100%;
+  height: 520px;
+  overflow-y: auto;
+  justify-content: flex-start;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-size: 14px;
+}
+
+.error {
+  color: #ff0000;
+  background: #ffe6e6;
+  border: 1px solid #ff8f8f;
+  text-align: justify;
+  width: 81%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-top: 20px;
+}
+
+.mnemonic {
+  color: #faad14;
+  background: #fffbe6;
+  border: 1px solid #ffe58f;
+  text-align: justify;
+  width: 81%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.seedPhraseContainer {
+  background: #f6f4f4;
+  border: 1px solid #d9d9d9;
+  width: 310px;
+  min-height: 160px;
+  padding: 5px 15px;
+  margin-top: 20px;
+}
+
+.logoutButton {
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  right: 20px;
+  top: 5px;
+  border-radius: 100px;
+}
+
+.logoutButton:hover {
+  background-color: rgba(0, 0, 0, 0.036);
+  cursor: pointer;
+}
+
+.walletName {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.walletView {
+  width: 100%;
+  padding: 10px;
+  height: 100%;
+  overflow-y: auto;
+  align-items: normal;  
+  align-content: normal;
+}
+
+.sendRow {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+}
+
+.nftGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 20px;
+}
+
+.nftItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nftImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.nftText {
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.customBtn {
+  /* width: 100%; */
+  margin: 10px 5px;
+  height: 35px;
+  font-size: 14px;
+  margin-top:20px;
+}
+
+.primary {
+  background-color: #0059ff;
+  border-color: #0059ff;
+  color: white;
+}
+
+.default {
+  background-color: #f0f0f0;
+  border-color: #d9d9d9; 
+  color: black; 
+}
+
+.customBtn:hover,
+.customBtn:focus {
+  background-color: #0059ff;
+  border-color: #0059ff;
+}
+
+.heading {
+  color: rgb(166, 166, 166); /* Set the text color */
+}
+
+.balanceContainer {
+  text-align: center;
+}
+
+.balanceAmount {
+  font-size: 40px;
+  margin: 0;
+}
+
+.balanceTicker {
+  font-size: 20px;
+  margin: 0;
+}
