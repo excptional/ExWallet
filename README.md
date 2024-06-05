@@ -105,6 +105,10 @@ Contributions are welcome! Please follow these steps to contribute:
     
 6. Open a pull request.
 
+## Privacy Policies
+
+Check here 👉🏻 [ExWallet Privacy Policies](https://sites.google.com/view/ex-wallet-privacy-policies/home)
+
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
