@@ -1,7 +1,7 @@
-const ETHEREUM_MAINNET_RPC_URL = "https://eth-mainnet.g.alchemy.com/v2/YW9GsAmYLO-P_J6Fn7xBkFRYwKS9JH1H"
-const SEPOLIA_TESTNET_RPC_URL = "https://eth-sepolia.g.alchemy.com/v2/YW9GsAmYLO-P_J6Fn7xBkFRYwKS9JH1H"
-const POLYGON_TESTNET_RPC_URL = "https://polygon-mainnet.g.alchemy.com/v2/YW9GsAmYLO-P_J6Fn7xBkFRYwKS9JH1H"
-const MUMBAI_TESTNET_RPC_URL = "https://polygon-mumbai.g.alchemy.com/v2/YW9GsAmYLO-P_J6Fn7xBkFRYwKS9JH1H"
+const ETHEREUM_MAINNET_RPC_URL = "https://eth-mainnet.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY"
+const SEPOLIA_TESTNET_RPC_URL = "https://eth-sepolia.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY"
+const POLYGON_TESTNET_RPC_URL = "https://polygon-mainnet.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY"
+const MUMBAI_TESTNET_RPC_URL = "https://polygon-mumbai.g.alchemy.com/v2/YOUR_ALCHEMY_API_KEY"
 
 const Ethereum = {
     hex: '0x1',
