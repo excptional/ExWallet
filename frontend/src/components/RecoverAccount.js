@@ -66,7 +66,7 @@ function RecoverAccount({ setWallet, setSeedPhrase }) {
                     }
                     className="customBtn"
                     type="primary"
-                    style={{width:"90%"}}
+                    style={{width:"90%", marginTop: "20px"}}
                     onClick={() => recoverWallet()}
                 >
                     Recover Wallet

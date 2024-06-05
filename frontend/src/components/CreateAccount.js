@@ -79,7 +79,7 @@ function CreateAccount({ setWallet, setSeedPhrase }) {
           onClick={() => setWalletAndMnemonic()}
           className="customBtn"
           type="primary"
-          style={{ width: "90%" }}
+          style={{ width: "90%", marginTop: "20px" }}
         >
           Open Your New Wallet
         </Button>
