@@ -65,7 +65,7 @@ To run the project locally for development:
 
 1. Clone the repository:
     sh
-    git clone [https://github.com/yourusername/ExWallet.git](https://github.com/excptional/ExWallet-A-Web3-Wallet-Chrome-Extension.git)
+    git clone [https://github.com/yourusername/ExWallet.git](https://github.com/excptional/ExWallet-A-Web3-Wallet-Extension.git)
     
 
 2. Navigate to the project directory:
