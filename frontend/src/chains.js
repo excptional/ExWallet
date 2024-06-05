@@ -1,28 +1,33 @@
+const ETHEREUM_MAINNET_RPC_URL = "https://eth-mainnet.g.alchemy.com/v2/YW9GsAmYLO-P_J6Fn7xBkFRYwKS9JH1H"
+const SEPOLIA_TESTNET_RPC_URL = "https://eth-sepolia.g.alchemy.com/v2/YW9GsAmYLO-P_J6Fn7xBkFRYwKS9JH1H"
+const POLYGON_TESTNET_RPC_URL = "https://polygon-mainnet.g.alchemy.com/v2/YW9GsAmYLO-P_J6Fn7xBkFRYwKS9JH1H"
+const MUMBAI_TESTNET_RPC_URL = "https://polygon-mumbai.g.alchemy.com/v2/YW9GsAmYLO-P_J6Fn7xBkFRYwKS9JH1H"
+
 const Ethereum = {
     hex: '0x1',
     name: 'Ethereum',
-    rpcUrl: '',
+    rpcUrl: ETHEREUM_MAINNET_RPC_URL,
     ticker: "ETH"
 };
 
 const MumbaiTestnet = {
     hex: '0x13881',
     name: 'Mumbai Testnet',
-    rpcUrl: '',
+    rpcUrl: MUMBAI_TESTNET_RPC_URL,
     ticker: "MATIC"
 };
 
 const Polygon = {
     hex: '0x89',
     name: 'Polygon',
-    rpcUrl: '',
+    rpcUrl: POLYGON_TESTNET_RPC_URL,
     ticker: 'MATIC'
 };
 
 const EthereumSepoliaTestnet = {
     hex: '0xaa36a7',
     name: 'Ethereum Sepolia Testnet',
-    rpcUrl: 'https://eth-sepolia.g.alchemy.com/v2/wTH9NHRG8XDQRGSjSXQaeEwd0_2PP_fW',
+    rpcUrl: SEPOLIA_TESTNET_RPC_URL,
     ticker: 'SepoliaETH'
 };
 

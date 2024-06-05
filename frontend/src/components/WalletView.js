@@ -8,6 +8,7 @@ import {
   Tabs,
   Input,
   Button,
+  message
 } from "antd";
 import { LogoutOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
@@ -15,6 +16,8 @@ import logo from "../noImg.png";
 import axios from "axios";
 import { CHAINS_CONFIG } from "../chains";
 import { ethers } from "ethers";
+import { CopyOutlined } from '@ant-design/icons';
+// const ETHERSCAN_KEY = "ZQ4SRJ6YGJXKHM7XCBYE4BX8ZRGN8CMRSC"
 
 
 function WalletView({
@@ -33,33 +36,8 @@ function WalletView({
   const [sendToAddress, setSendToAddress] = useState(null);
   const [processing, setProcessing] = useState(false);
   const [hash, setHash] = useState(null);
-
-  // const tokens = [
-  //   {
-  //     symbol: "ETH",
-  //     name: "Ethereum",
-  //     balance: 100000000000,
-  //     decimals: 18,
-  //   },
-  //   {
-  //     symbol: "LINK",
-  //     name: "Chainlink",
-  //     balance: 100000000000,
-  //     decimals: 18,
-  //   },
-  //   {
-  //     symbol: "UNI",
-  //     name: "Uniswap",
-  //     balance: 100000000000,
-  //     decimals: 18,
-  //   },
-  //   {
-  //     symbol: "MATIC",
-  //     name: "Polygon",
-  //     balance: 100000000000,
-  //     decimals: 18,
-  //   },
-  // ];
+  // const [transactions, setTransactions] = useState(null);
+  // const [loading, setLoading] = useState(true);
 
   const items = [
     {
@@ -104,9 +82,6 @@ function WalletView({
       ),
     },
     {
-      key: "4"
-    },
-    {
       key: "2",
       label: `NFTs`,
       children: (
@@ -133,9 +108,6 @@ function WalletView({
           )}
         </>
       ),
-    },
-    {
-      key: "4"
     },
     {
       key: "1",
@@ -198,6 +170,35 @@ function WalletView({
         </>
       ),
     },
+    // {
+    //   key: "4",
+    //   label: "Activity",
+    //   children: (
+    //     <>
+    //       {transactions ? (
+    //         <>
+    //           <ul>
+    //             {transactions.map((tx, index) => (
+    //               <li key={index}>
+    //                 <p><strong>Hash:</strong> {tx.hash}</p>
+    //                 <p><strong>From:</strong> {tx.from}</p>
+    //                 <p><strong>To:</strong> {tx.to}</p>
+    //                 <p><strong>Value:</strong> {tx.value.toString()} Wei</p>
+    //                 <p><strong>Date:</strong> {new Date(tx.timestamp * 1000).toLocaleString()}</p>
+    //               </li>
+    //             ))}
+    //           </ul>
+    //         </>
+    //       ) : (
+    //         <>
+    //           <span
+    //             style={{ marginTop: "5px" }}>
+    //             No activities to show</span>
+    //         </>
+    //       )}
+    //     </>
+    //   ),
+    // },
   ];
 
   async function sendTransaction(to, amount) {
@@ -216,7 +217,6 @@ function WalletView({
     };
 
     setProcessing(true);
-    const transaction = await wallet.sendTransaction(tx);
     try {
       const transaction = await wallet.sendTransaction(tx);
 
@@ -242,10 +242,26 @@ function WalletView({
     }
   }
 
-  async function getAccountTokens() {
+  // async function fetchTransactionHistory() {
+  //   const chain = CHAINS_CONFIG[selectedChain];
+
+  //   const provider = new ethers.JsonRpcProvider(chain.rpcUrl);
+
+  //   const privateKey = ethers.Wallet.fromPhrase(seedPhrase).privateKey;
+
+  //   const wallet = new ethers.Wallet(privateKey, provider);
+
+  //   const response = await fetch(`https://api.etherscan.io/api?module=account&action=txlist&address=${wallet}&startblock=0&endblock=99999999&sort=asc&apikey=${ETHERSCAN_KEY}`);
+  //   const data = await response.json();
+
+  //   setTransactions(data)
+  //   setLoading(false);
+  // }
+
+  const getAccountTokens = async() => {
     setFetching(true);
 
-    const res = await axios.get(`http://localhost:3001/getTokens`, {
+    const res = await axios.get("https://ex-wallet-backend-exceptional.onrender.com/getTokens", {
       params: {
         userAddress: wallet,
         chain: selectedChain,
@@ -267,6 +283,11 @@ function WalletView({
     setFetching(false);
   }
 
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(wallet);
+    message.success('Wallet address copied to clipboard');
+  };
+
 
   function logout() {
     setSeedPhrase(null);
@@ -283,6 +304,7 @@ function WalletView({
     setTokens(null);
     setBalance(0);
     getAccountTokens();
+    // fetchTransactionHistory();
   }, []);
 
   useEffect(() => {
@@ -291,28 +313,38 @@ function WalletView({
     setTokens(null);
     setBalance(0);
     getAccountTokens();
+    // fetchTransactionHistory();
   }, [selectedChain]);
 
   return (
     <>
       <div className="content">
         <div className="logoutButton"
-        onClick={logout}
+          onClick={logout}
         >
           <LogoutOutlined />
         </div>
         <div className="walletName">Wallet</div>
         <Tooltip title={wallet}>
-          <div>
-            {wallet.slice(0, 4)}...{wallet.slice(38)}
+          <div style={{ display: 'flex', alignItems: 'center' }}>
+            <div>
+              {wallet.slice(0, 4)}...{wallet.slice(38)}
+            </div>
+            <Button
+              icon={<CopyOutlined />}
+              type="text"
+              size="small"
+              onClick={copyToClipboard}
+              style={{ marginLeft: 8 }}
+            />
           </div>
         </Tooltip>
         <Divider />
         {!fetching && (
           <div className="balanceContainer">
-          <h1 className="balanceAmount">{balance}</h1>
-          <h3 className="balanceTicker">{CHAINS_CONFIG[selectedChain].ticker}</h3>
-        </div>
+            <h1 className="balanceAmount">{balance.toFixed(5)}</h1>
+            <h3 className="balanceTicker">{CHAINS_CONFIG[selectedChain].ticker}</h3>
+          </div>
         )}
 
         {fetching ? (
