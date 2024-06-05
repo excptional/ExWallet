@@ -150,7 +150,7 @@ function WalletView({
             }
             className="customBtn"
             type="primary"
-            style={{ width: "100%", marginLeft: "5px", marginRight: "5px" }}
+            style={{ width: "98%", marginLeft: "5px", marginRight: "5px" }}
             onClick={() => sendTransaction(sendToAddress, amountToSend)}
           >
             Send Tokens

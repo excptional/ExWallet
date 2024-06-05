@@ -1,7 +1,7 @@
 {
   "name": "Ex Wallet",
   "version": "1.0.0",
-  "description": "Ex Wallet is a secure and user-friendly web3 wallet designed for managing digital assets and interacting with decentralized applications. It supports multiple blockchains, ensures robust security, and offers seamless dApp integration across web and mobile platforms.",
+  "description": "Ex Walle is a secure and user-friendly web3 wallet for managing digital assets and dApps.",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
