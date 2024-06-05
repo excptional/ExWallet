@@ -2,7 +2,7 @@
 
 ![ExWallet Logo](https://firebasestorage.googleapis.com/v0/b/ex-wallet-4cb90.appspot.com/o/temp%2Fex-wallet.png?alt=media&token=34fc3666-dc76-4d05-9ac4-6c79a15136a0)
 
-ExWallet is a Web3 wallet extension designed to provide seamless interaction with the Ethereum blockchain. Utilizing Ether.js, React.js, Alchemy, and Moralis, ExWallet offers a robust and user-friendly interface for managing digital assets.
+ExWallet is a Web3 wallet extension designed to provide seamless interaction with the Ethereum blockchain. Utilizing Ether.js, React.js, Alchemy and Moralis. ExWallet offers a robust and user-friendly interface for managing digital assets.
 
 ## Features
 
