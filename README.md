@@ -23,7 +23,7 @@ ExWallet is a Web3 wallet extension designed to provide seamless interaction wit
 
 1. Clone the repository:
     sh
-    git clone https://github.com/excptional/ExWallet-A-Web3-Wallet-Chrome-Extension.git
+    git clone https://github.com/excptional/ExWallet-A-Web3-Wallet-Extension.git
     
 
 2. Navigate to the project directory:
