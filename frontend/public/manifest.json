@@ -1,7 +1,7 @@
 {
   "name": "Ex Wallet",
-  "version": "1.0.0",
-  "description": "Ex Walle is a secure and user-friendly web3 wallet for managing digital assets and dApps.",
+  "version": "1.0.1",
+  "description": "Ex Wallet is a secure and user-friendly web3 wallet for managing digital assets and dApps.",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
@@ -11,7 +11,5 @@
       "128": "ex-wallet-icon-128.png"
     }
   },
-  "permissions": [
-    "storage"
-  ]
+  "permissions": []
 }
