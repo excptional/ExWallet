@@ -17,7 +17,7 @@ ExWallet is a Web3 wallet extension designed to provide seamless interaction wit
 
 ### From the Chrome Web Store
 
-[Install ExWallet from the Chrome Web Store](chrome-webstore-url)
+[Install ExWallet from the Chrome Web Store](https://chromewebstore.google.com/detail/ex-wallet/bljkmhofgchldapdpdfbfglohfffdgfj)
 
 ### Manual Installation
 
