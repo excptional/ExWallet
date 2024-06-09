@@ -10,7 +10,7 @@ ExWallet is a Web3 wallet extension designed to provide seamless interaction wit
 - *Send & Receive ETH*: Easily send and receive Native Currencies, NFTs and Tokens.
 - *Transaction History*: View detailed transaction history.
 - *Blockchain Interaction*: Interact with decentralized applications (dApps) directly from your browser.
-- *Network Support*: Supports multiple different networks including Ehereum Mainnet, Polygon, Mumbai Test Network and Sepolia Test Network.
+- *Network Support*: Supports multiple different networks including Ethereum Mainnet, Polygon, Mumbai Test Network and Sepolia Test Network.
 - *Real-time Updates*: Get real-time balance updates using Alchemy and Moralis.
 
 ## Installation
@@ -23,7 +23,7 @@ ExWallet is a Web3 wallet extension designed to provide seamless interaction wit
 
 1. Clone the repository:
     sh
-    git clone https://github.com/excptional/ExWallet-A-Web3-Wallet-Extension.git
+    git clone https://github.com/excptional/ExWallet.git
     
 
 2. Navigate to the project directory:
@@ -65,7 +65,7 @@ To run the project locally for development:
 
 1. Clone the repository:
     sh
-    git clone [https://github.com/yourusername/ExWallet.git](https://github.com/excptional/ExWallet-A-Web3-Wallet-Extension.git)
+    git clone [https://github.com/yourusername/ExWallet.git](https://github.com/excptional/ExWallet.git)
     
 
 2. Navigate to the project directory:
